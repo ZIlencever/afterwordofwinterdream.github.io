@@ -1,0 +1,108 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=pie-half-donut&code=PYBwLglsB2AEC8sDeAoWszGAG0iAXMmuhgE4QDmFApqYQOQRjUC29xAvgDTHbU3QAJoVQkMoBgFYApPR5i-AMzAMAxtWjNSc4ugD0e2IODUAztHphYIWouqqw2AJ6wA7sFIBrN0wAWsYABXUjIIVU9TLiMIUwBDACM-WCZdWFNqPgdqQQBZYEFqQkVY7HTOeTTaCDNCAG1U0TFYaFiWQth6AEFVdVNTWAAxUmA2CrEwJxsGEGqdJthSWMEIQNM6-gAWAAZZKPoAdh36AF0xknVNWnXJI73D2VPU_UMlgCtVqzBfajSwWNIrLFoBQ-E9fv8wJ1gXxCABGAAcWzO6GwCQyIjB6FMvmArkIYFIgWoyJIig8LFiYC0AAoQP9WgBKIjzMQGWCqDykeyfb7WWgXP40TEkLlgYJwOmLFgAOhabVgAGoOrBqfRFdZ6TKbKQBbAAFSwABM6vo0gZ9AA3MKOGDuGDBJTYnVhUhYAA3EpEwgbQ2wqJy9r0QBt2oBavUAjvqAWZU1XaWch3Z72rCAGz7f2tQOAK8DANVxgBdFQDFsdGSehXR7sF7YABmSSGtNtBiAX01ANPKgArjQAKwYWXfGy4mAJx-5rphuAcU1ALg6gFXojuxl3C56wCmeH5Ahb2DyCcSwRQQbDYDC8-LAKkjWA3aQzrvln2w9XJ_bqqvGpWwvuwIskJisADKExhzNjJDZpiYCAu4_KovgQhuwwsMuQhVMCu4xNY1TqGe6ActgHgMNAMDUHMf7oAUqglBi-FiKYTgsPu2BYTh7CkbANr4TGf6ovE6K_vh2K4kUJRlEx1pgscqSMbAQkcBaQA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body style="height: 100%; margin: 0; overflow: hidden">
+<div id="container" style="height: 100%"></div>
+
+<script type="text/javascript" src="https://cdn.staticfile.org/echarts/5.4.0/echarts.min.js"></script>
+<!-- Uncomment this line if you want to dataTool extension
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/extension/dataTool.min.js"></script>
+-->
+<!-- Uncomment this line if you want to use gl extension
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+-->
+<!-- Uncomment this line if you want to echarts-stat extension
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+-->
+<!-- Uncomment this line if you want to use map
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+-->
+<!-- Uncomment these two lines if you want to use bmap extension
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/extension/bmap.min.js"></script>
+-->
+
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom, null, {
+        renderer: "canvas",
+        useDirtyRect: false,
+    });
+    var app = {};
+
+    var option;
+
+    option = {
+        title: {
+            text: "参与冰雪运动的契机",
+            left: "center",
+        },
+        tooltip: {
+            trigger: "item",
+            position: "inside",
+        },
+        legend: {
+            orient: "horizontal",
+
+            // top: "5%",
+            // left: "center",
+            x: "center", //可设定图例在左、右、居中
+            y: "bottom", //可设定图例在上、下、居中
+            // doesn't perfectly work with our tricks, disable it
+            // selectedMode: false,
+        },
+        series: [
+            {
+                type: "pie",
+                radius: ["40%", "70%"],
+                center: ["50%", "70%"],
+                // adjust the start angle
+                startAngle: 180,
+                label: {
+                    show: true,
+                    formatter(param) {
+                        // correct the percentage
+                        return param.name + " (" + param.percent * 2 + "%)";
+                    },
+                },
+                data: [
+                    {value: 421, name: "家庭影响"},
+                    {value: 167, name: "自身兴趣"},
+                    {value: 352, name: "好友推荐"},
+                    {value: 191, name: "好奇尝试"},
+
+                    {
+                        // make an record to fill the bottom 50%
+                        value: 421 + 167 + 352 + 191,
+                        itemStyle: {
+                            // stop the chart from rendering this piece
+                            color: "none",
+                            decal: {
+                                symbol: "none",
+                            },
+                        },
+                        label: {
+                            show: false,
+                        },
+                    },
+                ],
+            },
+        ],
+    };
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option);
+    }
+
+    window.addEventListener("resize", myChart.resize);
+</script>
+</body>
+</html>

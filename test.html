@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/test.css" />
+    <script src="./js/js.js"></script>
+    <title></title>
+    <script type="text/javascript">
+      document.addEventListener("plusready", function () {
+        //console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+      });
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="in">
+        <img src="./img/其他图片/下半转场.gif" alt="" />
+      </div>
+      <div class="to" style="display: none">
+        <img src="./img/其他图片/上半转场.gif" alt="" />
+      </div>
+
+      <div class="icon" onclick="go('./map.html')" style="color: #bad6c4">
+        <span class="iconfont">&#xe60c;</span>
+      </div>
+
+      <div class="test" style="padding-top: 10%">
+        <div class="title">
+          <img style="height: 3rem" src="./img/map/测一测标题1050.png" alt="" />
+        </div>
+        <div class="img">
+          <div class="item" style="left: -100%">
+            <img src="./img/人物插画/冰球1.png" alt="" />
+          </div>
+          <div class="item" style="right: -100%">
+            <img src="./img/人物插画/冰球2.png" alt="" />
+          </div>
+        </div>
+        <div class="question">
+          <ul class="list">
+            <li>
+              <div class="box">
+                <div class="hua1">
+                  <img src="./img/其他图片/雪花相框(左上）.png" alt="" />
+                </div>
+                <div class="zhong">
+                  <button onclick="go('./pages/test/motion.html')">
+                    你适合什么运动
+                  </button>
+                </div>
+                <div class="hua2">
+                  <img src="./img/其他图片/雪花相框(右下）.png" alt="" />
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="box">
+                <div class="hua1">
+                  <img src="./img/其他图片/雪花相框(左上）.png" alt="" />
+                </div>
+                <div class="zhong">
+                  <button onclick="go('./pages/test/knowledge.html')">
+                    你知道哪些知识
+                  </button>
+                </div>
+                <div class="hua2">
+                  <img src="./img/其他图片/雪花相框(右下）.png" alt="" />
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="box">
+                <div class="hua1">
+                  <img src="./img/其他图片/雪花相框(左上）.png" alt="" />
+                </div>
+                <div class="zhong">
+                  <button onclick="go('./pages/test/safe.html')">
+                    运动安全小问答
+                  </button>
+                </div>
+                <div class="hua2">
+                  <img src="./img/其他图片/雪花相框(右下）.png" alt="" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footre">
+          <span onclick="go('./map.html')">回城</span>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script></script>
+  </body>
+</html>

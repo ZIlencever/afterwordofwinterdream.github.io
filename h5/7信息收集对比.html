@@ -1,0 +1,105 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=pie-roseType&code=PYBwLglsB2AEC8sDeAoWtJgDYFMBcya6GOAHmAQOSCf2gEwAMttgNYqCmmoFjygIW6DOioBc2lAGiLpcAMwqxKAYxzQwOAE6UiAXyHowwYFkggCqYhgUQA5icVUI8gLaDhsUcAXWAhmHkKqSFytgAeACMFAHoAPiQA330pXwAKJAATFQBSAEpldDVhTW0A4FJ9ewBnAAtgAHcCMAUAVxx1YlEcNxqFfEJDdFcFAGt9WFKKqtqcWCzO2AS3FwA1CBxK5AGyxeq6gVg2lwSAeWgsAE8CURcsItHxzraizTb-wdWRsYbDIpcANxwAQSKASVdzPcVsM6mN7Co0GpYERcOZoAlCoZNHpJHl3MBbC9JtMCABteyGJCwd6nOoEWgANgA7BtoC5rO1KIAhyMA0O6Ack1APOJgBe3QC1JoBtWMA0XKAGH_ANxygAqlQADFoAiXzYgEP5QD2BpRngTiESSVgybBaABWGmwOkMqiAOblAN-eYsA916AduDAGvKcsVyom6DVpPaAEZXRTafTGYBCm0AkObiviAMXlAPRm7CNgBAVQDePoBnPUAD8oswAMSoAPt24CqVlwmzo1bvoXsNkkAsHJ8QD6coXAFSa3EAw_oZ-wAXVUDRyWDyBQ6xAeIPq9iaLTu7cM3T6S07RlBmeIUzAs3miyJo7W9U2zV2-yODlO5wdVxwNyc7XnwLHFyx6Denx-_xcgJHR8XYMMEMyGyIRHOxl3ePsqBVBsZgAbFQArtMABfixUAIeVADg5QBQALsCYwAOEBGRAeZYKubYIBqIo8QYDZXQAFnoOtT1gGQ5AsWBcUoHVkkESRtXoGiiJVBRgHOAAVBDGRcLZUMMKwcGsABleDcERR08gUBJFAAJXQzCCG1FUJxEFwAhwLAxImBcRiU4iBJAEoXCKCAsIHTosFU9TNMdbS6hVTJdJVKcXC_R0lnVTVKT1P8qFZTleUFUVJRlVh023LNiRdcldXzRlTQtG07QzYinUinMCHdT19W9Kh_UDXhQ3DaN4yTVMwuU1U0s1V082ygtKGLXgy0rGsH06BtHyxAxOh8yRAD10oDQMgmDiPgxCqGQnBeOIBQ5NM3EcNgfDCOI0iPDxSgqW1GiNkoejGOIlj2M4qhuOaab0H4oSRIPezYAkqSFFkhIMNMxSJgq5zXMdbNqtdABmWLfPZbl-WFcVpSS8LOl-t0mCByR4qtW1QvtCrUo89oAE4st6yg8rFYMw0jWMExTNM0ZS9yoq1V0EYa0sK2rWsJg64gn1gBsVAAbiAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body style="height: 100%; margin: 0; overflow: hidden">
+<div id="container" style="height: 100%">
+    <script type="text/javascript" src="https://cdn.staticfile.org/echarts/5.4.0/echarts.min.js"></script>
+    <script type="text/javascript">
+        var dom = document.getElementById("container");
+        var myChart = echarts.init(dom, null, {
+            renderer: "canvas",
+            useDirtyRect: false,
+        });
+        var app = {};
+
+        var option;
+
+        option = {
+            title: {
+                text: "对2022冬奥会的关注",
+                left: "center",
+            },
+            grid: {
+                left: "10%",
+                right: "10%",
+                containLabel: true,
+            },
+            tooltip: {
+                trigger: "item",
+                formatter: "{a} <br/>{b} : {c} ({d}%)",
+                position: "inside",
+            },
+
+            legend: {
+                top: "bottom",
+                data: [
+                    {value: 267, name: "观看大量直播赛事，主动检索冬奥信息"},
+                    {value: 257, name: "从移动端获取冬奥信息"},
+                    {value: 116, name: "没有主动关注但是会从各类平台看到相关信息"},
+                    {value: 10, name: "不关注也不太关心"},
+                ],
+            },
+
+            series: [
+                {
+                    left: "center",
+                    top: "0%",
+                    width: "100%",
+                    height: "50%",
+                    name: "冰雪运动参与者",
+                    type: "pie",
+                    radius: [20, 140],
+                    roseType: "area",
+                    itemStyle: {
+                        borderRadius: 5,
+                    },
+
+                    data: [
+                        {value: 267, name: "观看大量直播赛事，主动检索冬奥信息"},
+                        {value: 257, name: "从移动端获取冬奥信息"},
+                        {
+                            value: 116,
+                            name: "没有主动关注但是会从各类平台看到相关信息",
+                        },
+                        {value: 10, name: "不关注也不太关心"},
+                    ],
+                },
+                {
+                    top: "40%",
+                    width: "100%",
+                    height: "50%",
+                    left: "center",
+                    name: "非冰雪运动参与者",
+                    type: "pie",
+                    radius: [20, 140],
+                    roseType: "area",
+                    seriesPie: 60,
+                    itemStyle: {
+                        borderRadius: 5,
+                    },
+                    data: [
+                        {value: 113, name: "观看大量直播赛事，主动检索冬奥信息"},
+                        {value: 122, name: "从移动端获取冬奥信息"},
+                        {value: 96, name: "没有主动关注但是会从各类平台看到相关信息"},
+                        {value: 21, name: "不关注也不太关心"},
+                    ],
+                },
+            ],
+        };
+
+        if (option && typeof option === "object") {
+            myChart.setOption(option);
+        }
+
+        window.addEventListener("resize", myChart.resize);
+    </script>
+</div>
+</body>
+</html>

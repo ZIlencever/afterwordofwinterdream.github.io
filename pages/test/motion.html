@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/test.css" />
+    <script src="../../js/js.js"></script>
+    <title></title>
+    <script type="text/javascript">
+      document.addEventListener("plusready", function () {
+        //console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+      });
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="in">
+        <img src="../../img/其他图片/下半转场.gif" alt="" />
+      </div>
+
+      <div class="to" style="display: none">
+        <img src="../../img/其他图片/上半转场.gif" alt="" />
+      </div>
+
+      <div class="icon" onclick="go('../../test.html')" style="color: #bad6c4">
+        <span class="iconfont">&#xe60c;</span>
+      </div>
+
+      <div class="test" style="overflow-y: auto">
+        <div class="question">
+          <ul class="list list2">
+            <li class="item">
+              <div class="zwf"></div>
+              <div class="question_title">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>你更喜欢冰上运动还是雪上运动？</span>
+              </div>
+              <ul class="xuanxiang">
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(1, 'A')">冰上运动</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(1, 'B')">雪上运动</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="item">
+              <div class="zwf"></div>
+              <div class="question_title">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>你更喜欢个人运动还是团体运动？</span>
+              </div>
+              <ul>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(2, 'A')">个人运动</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(2, 'B')">团体运动</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="item">
+              <div class="zwf"></div>
+              <div class="question_title">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>你更喜欢竞技类运动还是娱乐类运动？</span>
+              </div>
+              <ul>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(3, 'A')">竞技类</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(3, 'B')">娱乐类</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="item">
+              <div class="zwf"></div>
+              <div class="question_title">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>你更喜欢在室内运动还是在室外运动？</span>
+              </div>
+              <ul>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(4, 'A')">在室内</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(4, 'B')">在室外</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="item">
+              <div class="zwf"></div>
+              <div class="question_title">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>你更喜欢个性化的运动还是大众化的运动？</span>
+              </div>
+              <ul>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(5, 'A')">个性化的</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(5, 'B')">大众化的</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <!-- 答案 -->
+
+            <li
+              class="item dd"
+              style="height: 0; overflow: hidden; position: relative"
+            >
+              <div class="zwf"></div>
+              <div class="question_title" style="margin: 0">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>你更喜欢个性化的运动还是大众化的运动？</span>
+              </div>
+              <div class="da">
+                <img class="bh" src="" alt="" />
+              </div>
+              <div id="footre2" class="footre2">
+                <span onclick="go('../../test.html')"> 返回测一测</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script>
+      var box = document.querySelector(".list2");
+      console.log(box);
+
+      box.addEventListener("scroll", function (e) {
+        console.log(e);
+      });
+
+      let li = ["", "", "", "", ""];
+      function answer(index, key) {
+        li[index - 1] = key;
+
+        $(".list .item:nth-child(" + index + ") .zhong")
+          .find(".xz")
+          .remove();
+        $(
+          $(".list .item:nth-child(" + index + ") .zhong")[key === "A" ? 0 : 1]
+        ).append('<img class="xz" src="../../img/xz.png" alt="" />');
+        answered = li.filter(function (e) {
+          return e === "";
+        });
+
+        if (answered.length <= 0) {
+          let da = [
+            {
+              name: "冰壶",
+              key: ["ABBAA", "ABBAB", "ABBBA", "ABBBB"],
+            },
+            {
+              name: "冰球",
+              key: ["ABAAA", "ABAAB", "ABABA", "ABABB"],
+            },
+            {
+              name: "单板滑雪",
+              key: ["BAAAA", "BAABA", "BABAA", "BBAAA", "BABBA", "BBABA"],
+            },
+            {
+              name: "短道速滑",
+              key: ["AAAAA", "AAABA"],
+            },
+            {
+              name: "花样滑冰",
+              key: ["AABAA", "AABAB", "AABBA", "AABBB"],
+            },
+            {
+              name: "速度滑冰",
+              key: ["AAABB", "AAAAB"],
+            },
+            {
+              name: "无舵雪橇",
+              key: ["BABBB", "BBBAB", "BBBBA", "BBBBB", "BBBAA", "BABAB"],
+            },
+            {
+              name: "自由式滑雪",
+              key: ["BAAAB", "BAABB", "BBAAB", "BBABB"],
+            },
+          ];
+          let a = da.filter(function (e) {
+            return e.key.includes(li.join(""));
+          });
+          let name = "";
+          let src = "";
+
+          switch (a[0].name) {
+            case "冰壶":
+              name = "你适合冰壶";
+              src = "../../img/人物插画/冰壶.png";
+              break;
+            case "冰球":
+              name = "你适合冰球";
+              src = "../../img/人物插画/双人冰球.png";
+              break;
+            case "单板滑雪":
+              name = "你适合单板滑雪";
+              src = "../../img/人物插画/单板滑雪.png";
+              break;
+            case "短道速滑":
+              name = "你适合短道速滑";
+              src = "../../img/人物插画/短道速滑.png";
+              break;
+            case "花样滑冰":
+              name = "你适合花样滑冰";
+              src = "../../img/人物插画/花样滑冰.png";
+              break;
+            case "速度滑冰":
+              name = "你适合速度滑冰";
+              src = "../../img/人物插画/速度滑冰.png";
+              break;
+            case "无舵雪橇":
+              name = "你适合无舵雪橇";
+              src = "../../img/人物插画/无舵雪橇.png";
+              break;
+            case "自由式滑雪":
+              name = "你适合自由式滑雪";
+              src = "../../img/人物插画/自由式滑雪.png";
+              break;
+          }
+          $(".dd .question_title span").html(name);
+          $(".dd .da img").attr("src", src);
+          $(".dd").height("100%");
+          if (name === "你适合短道速滑") {
+            $(".dd .da img")[0].style.left = "60%";
+          }
+          setTimeout(() => {
+            document
+              .getElementsByClassName("item")[5]
+              .scrollIntoView({ behavior: "smooth", block: "center" });
+          }, 200);
+          return;
+        }
+
+        if (index == 5 && answered.length > 0) {
+          console.log(1);
+
+          for (let i = 0; i < li.length; i++) {
+            console.log(li[i], i);
+
+            if (!li[i]) {
+              setTimeout(() => {
+                document.getElementsByClassName("item")[i].scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                });
+              }, 200);
+              break;
+            }
+          }
+        } else {
+          setTimeout(() => {
+            document
+              .getElementsByClassName("item")
+              [index].scrollIntoView({ behavior: "smooth", block: "center" });
+          }, 200);
+        }
+      }
+    </script>
+  </body>
+</html>

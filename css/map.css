@@ -1,0 +1,210 @@
+.main {
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+
+.map {
+    height: 100%;
+    position: relative;
+    background-image: url(../img/背景/2地图背景（不含建筑）.png);
+    background-size: 100% 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+
+
+}
+
+.main::-webkit-scrollbar {
+    width: 0;
+}
+
+/*111*/
+
+.list2 {
+    scroll-snap-type: y mandatory;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.list2::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.list2 .item {
+    height: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    box-sizing: border-box;
+
+}
+
+.test {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    /* padding-top: 3%; */
+    overflow: hidden;
+}
+
+.question {
+    height: 100%;
+}
+
+.question ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/*111*/
+.end {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    /* width: 8rem;
+    height: 6rem; */
+    /* background: none; */
+    border: 0;
+    position: absolute;
+    padding: 0;
+    background: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnbg {
+    width: 100%;
+    height: auto !important;
+}
+
+.btn img {
+    /* width: 4rem; */
+    height: 2rem;
+}
+
+.btn1 {
+    width: 60%;
+    height: 25%;
+    right: 15%;
+    top: 0.7%;
+    /* background: url(../img/其他图片/1雪如意.png) center no-repeat; */
+    /* background-size: 100% 100%; */
+
+}
+
+.btn div {
+    position: absolute;
+    border-radius: 0.5rem;
+    opacity: 0;
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 1.5s;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    /* height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.btn1 div {
+    margin: 0 auto;
+    border: 1px solid #bad6c4;
+    background: #bad6c4c9;
+}
+
+.btn2 {
+    width: 51%;
+    height: 18%;
+    left: 0%;
+    top: 30%;
+}
+
+.btn2 div {
+    border: 1px solid #beb898;
+    background: #beb898c9;
+}
+
+.btn3 {
+    width: 55%;
+    height: 19%;
+    right: 0%;
+    top: 46%;
+}
+
+.btn3 div {
+    border: 1px solid #70cfee;
+    background: #70cfeeb8;
+}
+
+.btn4 {
+    width: 65%;
+    height: 25%;
+    left: 6%;
+    bottom: 6%;
+}
+
+.btn4 div {
+    border: 1px solid #a2b1c9;
+    background: #a2b1c9c9;
+}
+
+p {
+    margin: 0;
+}
+
+.ret {
+    opacity: 0;
+    position: absolute;
+    top: 23%;
+    left: 4%;
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 1.5s;
+
+    border-radius: 0.5rem;
+    border: 1px solid #737373;
+    background: #737373c9;
+    height: 1.5rem;
+    box-sizing: border-box;
+    padding: 0 0.5rem;
+}
+
+.coming {
+    /* width: 5rem; */
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #737373;
+    background: #737373c9;
+    text-align: center;
+    height: 2rem;
+    box-sizing: border-box;
+    opacity: 0;
+    position: absolute;
+    bottom: 1%;
+    color: #fff;
+    right: 1%;
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+.coming p:nth-child(3) {
+    position: relative;
+    right: 34%;
+}
+
+.coming p:nth-child(4) {
+    position: relative;
+    right: 75%;
+}

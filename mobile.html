@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta
+            name="viewport"
+            content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <script src="./js/js.js"></script>
+    <title></title>
+    <script type="text/javascript">
+        document.addEventListener("plusready", function () {
+            //console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+        });
+    </script>
+</head>
+<body>
+<div class="main">
+    <div class="to" style="display: none">
+        <img src="./img/其他图片/上半转场.gif" alt=""/>
+    </div>
+    <div class="title">
+        <img src="./img/其他图片/冬梦后记透明背景.png" alt=""/>
+    </div>
+    <div class="title2">
+        <p>冰雪运动</p>
+        <p>双城之记</p>
+    </div>
+    <div class="cx">
+        <img src="./img/人物插画/自由式滑雪.png" alt=""/>
+    </div>
+    <div class="play">
+        <span>点击开始</span>
+    </div>
+</div>
+<script src="./js/jquery-3.4.1.min.js"></script>
+<script>
+    $(".play span").click(function () {
+        go("./map.html");
+    });
+</script>
+</body>
+</html>

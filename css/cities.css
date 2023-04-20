@@ -1,0 +1,195 @@
+.main {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-image: url(../img/背景/4采访屏背景.png);
+    background-size: 100% 100%;
+}
+
+
+.evolvebg {
+    background-image: url(../img/背景/5进展屏背景.png) !important;
+}
+
+.difficultbg {
+    background-image: url(../img/背景/6困境屏背景.png) !important;
+}
+
+.comingbg {
+    background-image: url(../img/背景/7展望屏背景.png) !important;
+}
+
+.endbg {
+    background-image: url(../img/背景/8尾声屏背景.png) !important;
+}
+
+.test {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 3%;
+    overflow: hidden;
+}
+
+.test .title {
+    opacity: 0;
+    font-family: '叶根友唐楷飞墨';
+    text-align: center;
+    font-size: 1.5rem;
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 1.7s;
+}
+
+p {
+    margin: 0;
+}
+
+.cities p {
+    line-height: 1.7;
+    font-size: 0.7rem;
+    font-family: 黑体;
+}
+
+.cities {
+    opacity: 0;
+    padding: 0 10%;
+    font-size: 0.8rem;
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 2.3s;
+    padding-top: 10%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.cities_title {
+    padding: 0.045rem 0;
+    border-bottom: 0.01rem solid #e8f0ff;
+    box-sizing: border-box;
+}
+
+.cities_title span {
+    background: linear-gradient(260deg, transparent 7px, #4183ff 0)top right no-repeat;
+    color: #fff;
+    padding: 0.1rem 0.4rem;
+    position: relative;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.cities_title span:after {
+    content: '';
+    background: linear-gradient(260deg, transparent 7px, #e8f0ff 0)top right;
+    color: #fff;
+    position: absolute;
+    z-index: -1;
+    top: 0.2rem;
+    bottom: 0;
+    width: 0.8rem;
+}
+
+
+.cities img {
+    width: 35%;
+    margin: 10% 0;
+}
+
+
+
+.footre2 {
+    opacity: 0;
+    /* font-family: '叶根友唐楷飞墨'; */
+    font-size: 0.7rem;
+    text-align: center;
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 3s;
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+}
+
+.footre2 span {
+    padding: 0.1rem 0.5rem;
+}
+
+
+
+
+.question_title {
+    background: url(../img/其他图片/人物名片.png) center no-repeat;
+    background-size: 100% 100%;
+    /* padding: 15% 10% 15% 15%; */
+    padding: 2rem 1rem;
+    margin-bottom: 5%;
+}
+
+.visit {
+    height: 20rem;
+    font-size: 0.8rem;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.visit .item {
+    width: 100%;
+    padding: 0 10%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.visit .item .question_title {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: '叶根友唐楷飞墨';
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.visit .item p {
+    line-height: 1.5;
+    padding: 0 5%;
+}
+
+.italic {
+    font-style: italic;
+    color: #ff5722;
+    text-align: right;
+    margin: 5% 0;
+    font-size: 0.8rem;
+
+}
+
+.huida {
+    max-height: 10rem;
+    overflow: auto;
+}
+
+.h5 {
+    width: 100vw;
+    height: 35vh;
+    margin: 5vh 0;
+    position: relative;
+    left: -10vw;
+}
+
+.zuoyou {
+    display: flex;
+    font-size: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.zuoyou img {
+    width: 0.7rem;
+}
+
+.zuoyou span {
+    margin: 0 0.5rem;
+}

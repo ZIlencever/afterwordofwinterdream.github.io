@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/map.css" />
+    <script src="./js/js.js"></script>
+    <title></title>
+    <script type="text/javascript">
+      document.addEventListener("plusready", function () {
+        //console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+      });
+    </script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="in">
+        <img src="./img/其他图片/下半转场.gif" alt="" />
+      </div>
+
+      <div class="to" style="display: none">
+        <img src="./img/其他图片/上半转场.gif" alt="" />
+      </div>
+
+      <div class="test" style="overflow-y: auto">
+        <div class="question">
+          <ul class="list list2">
+            <li class="item">
+              <div class="map">
+                <div class="ret" onclick="go('./index.html')">
+                  <img
+                    style="height: 1.5rem"
+                    src="./img/map/封面标题750.png"
+                    alt=""
+                  />
+                </div>
+                <button class="btn btn1" onclick="go('./test.html')">
+                  <img class="btnbg" src="./img/其他图片/1雪如意.png" alt="" />
+                  <div>
+                    <img src="./img/map/测一测标题1050.png" alt="" />
+                  </div>
+                </button>
+                <button class="btn btn2" onclick="go('./cities.html')">
+                  <img class="btnbg" src="./img/其他图片/2冰丝带.png" alt="" />
+                  <div>
+                    <img
+                      style="width: 6rem"
+                      src="./img/map/双城之记标题1500.png"
+                      alt=""
+                    />
+                  </div>
+                </button>
+                <button class="btn btn3" onclick="go('./evolve.html')">
+                  <img class="btnbg" src="./img/其他图片/3冰立方.png" alt="" />
+
+                  <div>
+                    <img src="./img/map/进展标题750.png" alt="" />
+                  </div>
+                </button>
+                <button class="btn btn4" onclick="go('./difficult.html')">
+                  <img class="btnbg" src="./img/其他图片/4冰之帆.png" alt="" />
+
+                  <div>
+                    <img src="./img/map/困境标题750.png" alt="" />
+                  </div>
+                </button>
+
+                <div class="coming" onclick="go('./coming.html')">
+                  <img
+                    style="height: 2rem"
+                    src="./img/map/展望标题750.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="item">
+              <iframe
+                style="height: 100%; width: 100%"
+                class="h5"
+                src="./end.html"
+                frameborder="0"
+                style="height: 100%"
+              ></iframe>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+      addEventListener("message", (e) => {
+        document.getElementsByClassName("map")[0].scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      });
+
+      // window.parent.document.getElementsByClassName("map")[0].scrollIntoView({
+      //   behavior: "smooth",
+      //   block: "center",
+      // });
+    </script>
+  </body>
+</html>

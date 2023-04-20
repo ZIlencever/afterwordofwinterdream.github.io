@@ -1,0 +1,61 @@
+.main {
+    height: 100%;
+    overflow: hidden;
+    background-image: url(../img/背景/1封面屏背景.png);
+    background-size: 100% 100%;
+}
+
+.title {
+    opacity: 0;
+    animation: fade-in 1.5s ease-in-out forwards;
+}
+
+.title img {
+    width: 9rem;
+}
+
+.title2 {
+    opacity: 0;
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 0.7s;
+}
+
+.title2 p {
+    margin: 0;
+    padding-left: 0.6rem;
+    font-weight: 600;
+    font-size: 1.9rem;
+    font-family: '叶根友唐楷飞墨';
+}
+
+.cx {
+    opacity: 0;
+    height: 14.5rem;
+    margin: -5rem 0 0 -5rem;
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 1.5s;
+}
+
+.cx img {
+    width: 35rem;
+    height: 20rem;
+}
+
+.play {
+    position: absolute;
+    opacity: 0;
+    font-size: 0.8rem;
+    animation: fade-in 1.5s ease-in-out forwards;
+    animation-delay: 1.5s;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: 黑体;
+    cursor: pointer;
+}
+
+.play span {
+    border: 1px dashed #409cb3;
+    padding: 0.3rem;
+    background: #c7f5ff78;
+}

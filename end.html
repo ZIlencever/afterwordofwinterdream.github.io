@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cities.css" />
+    <script src="./js/js.js"></script>
+    <title></title>
+    <script type="text/javascript">
+      document.addEventListener("plusready", function () {
+        //console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+      });
+    </script>
+  </head>
+  <body>
+    <div class="main endbg">
+      <div class="in">
+        <img src="./img/其他图片/下半转场.gif" alt="" />
+      </div>
+
+      <div class="to" style="display: none">
+        <img src="./img/其他图片/上半转场.gif" alt="" />
+      </div>
+
+      <div class="icon" onclick="goTop()" style="color: #737373">
+        <span class="iconfont">&#xe60c;</span>
+      </div>
+      <div class="top"></div>
+      <div class="test" style="overflow-y: auto; padding-top: 0">
+        <div class="cities" style="font-size: 0.6rem">
+          <p>统筹策划：董吉郅、具千辉</p>
+          <p>采访编辑：具千辉</p>
+          <p>数据分析：具千辉</p>
+          <p>数据处理：董吉郅</p>
+          <p>视觉设计：董吉郅</p>
+          <p>后期制作：董吉郅</p>
+          <p>产品开发：具千辉</p>
+          <p>指导老师：</p>
+          <p>郑志亮、吴炜华、付晓光、白晓晴</p>
+
+          <p>&nbsp;</p>
+
+          <p>数据来源：</p>
+          <p>《2020中国冰雪产业发展研究报告》</p>
+          <p>《2021中国冰雪产业发展研究报告》</p>
+          <p>《2022中国冰雪产业发展研究报告》</p>
+          <p>《中国冰雪旅游发展报告2022》</p>
+          <p>《北京2022年冬奥会和冬残奥会遗产报告（赛后）》</p>
+          <p>《2022年市政府工作报告重点任务清单》</p>
+          <p>《北京2022年冬奥会和冬残奥会遗产报告（2020）》</p>
+          <p>《北京奥运城市发展促进会首页》</p>
+          <p>《国家统计局“带动三亿人参与冰雪运动”调查主要数据结果》</p>
+          <p>《BOSS直聘冰雪产业人才发展观察》</p>
+          <p>《中国滑雪产业白皮书》</p>
+          <p>《专业数据研究院——2022年冰雪产业研究报告》</p>
+          <p>
+            《专业数据研究院——2022年中国冰雪装备行业市场现状及发展趋势分析》
+          </p>
+          <p>相关报道：</p>
+          <p>《北京依托冬奥场馆创建30个青少年校外冰雪活动中心》北京奥组委</p>
+          <p>
+            《国家速滑馆“冰丝带”向公众开放 启动冬奥遗产可持续利用》北京奥组委
+          </p>
+          <p>《恢复开放以来人气不断，首钢滑雪大跳台暑期将“上新”》北京奥组委</p>
+          <p>《冬奥场馆将四季运营全面向公众开放》北京奥组委</p>
+          <p>
+            《国家速滑馆“冰丝带”向公众开放 启动冬奥遗产可持续利用》北京奥组委
+          </p>
+          <p>《恢复开放以来人气不断，首钢滑雪大跳台暑期将“上新”》北京奥组委</p>
+          <p>《市场观潮｜“北雪南移”有助于形成全国性冰雪运动市场》中工网</p>
+          <p>
+            《冬奥一周年系列纪念活动将在京张三赛区组织进行，期间冬奥各场馆向公众开放》上海观察
+          </p>
+
+          <p>&nbsp;</p>
+
+          <p>文献：</p>
+          <p>
+            [1]
+            孙葆丽,朱志强,刘石等.冬奥遗产可持续发展期研究[J].武汉体育学院学报,2022,56(02):5-11.DOI:10.15930/j.cnki.wtxb.2022.02.005.
+          </p>
+          <p>
+            [2]
+            孙葆丽,王家宏,林存真等.奥运遗产特点架构研究[J].天津体育学院学报,2021,36(04):399-404.DOI:10.13297/j.cnki.issn1005-0000.2021.04.005.
+          </p>
+          <p>
+            [3]
+            窦光璐,白雪,庞凌波等.首钢滑雪大跳台：结合工业遗产适应性再利用的冬奥场馆设计[J]建筑学报,2021,No.633(Z1):
+            42-47 .DOI:10.19819/j.cnki.ISSN0529-1399 .202107007.
+          </p>
+          <div style="text-align: center; text-indent: 0">
+            <img src="./img/Q版插画/元宵节.png" alt="" />
+          </div>
+        </div>
+
+        <div class="footre2">
+          <span style="border: 0.07px dashed #737373" onclick="goTop()"
+            >回城</span
+          >
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery-3.4.1.min.js"></script>
+    <script>
+      function goTop() {
+        window.parent.postMessage("ddd", "*");
+        // window.parent.document.getElementsByClassName("map")[0].scrollIntoView({
+        //   behavior: "smooth",
+        //   block: "center",
+        // });
+      }
+    </script>
+  </body>
+</html>

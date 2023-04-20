@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/test.css" />
+    <script src="../../js/js.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="in">
+        <img src="../../img/其他图片/下半转场.gif" alt="" />
+      </div>
+
+      <div class="to" style="display: none">
+        <img src="../../img/其他图片/上半转场.gif" alt="" />
+      </div>
+      <div class="icon" onclick="go('../../test.html')" style="color: #bad6c4">
+        <span class="iconfont">&#xe60c;</span>
+      </div>
+
+      <div class="box lingjiang" style="display: none">
+        <div class="hua1">
+          <img
+            style="width: 30%"
+            src="../../img/其他图片/雪花相框(左上）.png"
+            alt=""
+          />
+        </div>
+        <div class="zhong" style="margin-top: 3%">
+          <span onclick="hide('.lingjiang')" style="font-size: 0.55rem"
+            >恭喜你全部答对了！下方填写联系方式可获得礼物</span
+          >
+          <input type="text" />
+          <a onclick="hide('.lingjiang')">领取</a>
+        </div>
+        <div class="hua2" style="margin-top: -10%">
+          <img
+            style="width: 30%"
+            src="../../img/其他图片/雪花相框(右下）.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="test" style="overflow-y: auto; padding-top: 0">
+        <div class="question">
+          <ul class="list list2">
+            <li class="item">
+              <div class="zwf"></div>
+
+              <div class="question_title">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>世界上第一座双奥之城是以下哪一座城市？</span>
+              </div>
+              <ul>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(1, 'A')">温哥华</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(1, 'B')">巴黎</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(1, 'C')">北京</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="item">
+              <div class="zwf"></div>
+
+              <div class="question_title">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>北京冬奥会是第几届冬奥会？</span>
+              </div>
+              <ul>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(2, 'A')">第20届</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(2, 'B')">第24届</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(2, 'C')">第29届</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="item">
+              <div class="zwf"></div>
+
+              <div class="question_title">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>北京冬奥会中国代表队一共获得几枚金牌？</span>
+              </div>
+              <ul>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(3, 'A')">9枚</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(3, 'B')">15枚</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(3, 'C')">16枚</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="item">
+              <div class="zwf"></div>
+
+              <div class="question_title">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>雪如意主要承接的什么项目？</span>
+              </div>
+              <ul>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(4, 'A')">
+                        跳台滑雪、北欧两项
+                      </button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(4, 'B')">冰壶</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(4, 'C')">速度滑冰</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+
+            <li class="item" style="position: relative">
+              <div class="zwf"></div>
+              <div class="question_title">
+                <img class="mp" src="../../img/其他图片/人物名片.png" alt="" />
+                <span>截至2022年初，中国冰雪运动参与人数为？</span>
+              </div>
+              <ul>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(5, 'A')">0.68亿</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(5, 'B')">1.43亿</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="box">
+                    <div class="hua1">
+                      <img
+                        src="../../img/其他图片/雪花相框(左上）.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="zhong">
+                      <button onclick="answer(5, 'C')">3.46亿</button>
+                    </div>
+                    <div class="hua2">
+                      <img
+                        src="../../img/其他图片/雪花相框(右下）.png"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <div id="footre2" class="footre2">
+                <span onclick="go('../../test.html')"> 返回测一测</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- <div class="da" style="height: 0"></div> -->
+        <!-- 
+        <div id="footre2" class="footre2">
+          <span onclick="go('../../test.html')"> 返回测一测</span> -->
+        <!-- </div> -->
+      </div>
+    </div>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script>
+      let li = ["", "", "", "", ""];
+      let da = ["C", "B", "A", "A", "C"];
+      let sum = 0;
+      function answer(index, key) {
+        if ($(".list2 .item:nth-child(" + index + ") .zhong #xz").length > 0) {
+          return;
+        }
+        sum++;
+        let i = geti(key);
+        if (da[index - 1] === key) {
+          li[index - 1] = key;
+          $($(".list2 .item:nth-child(" + index + ") .zhong")[i]).append(
+            '<img id="xz" class="xz" src="../../img/xz.png" alt="" />'
+          );
+        } else {
+          $(
+            $(".list2 .item:nth-child(" + index + ") .zhong")[
+              geti(da[index - 1])
+            ]
+          ).append('<img id="xz" class="xz" src="../../img/xz.png" alt="" />');
+          $($(".list2 .item:nth-child(" + index + ") .zhong")[i]).append(
+            '<img class="xz" src="../../img/cuo.png" alt="" />'
+          );
+        }
+
+        if (sum == 5 && li.join("") == da.join("")) {
+          //全部答对
+          console.log("全部答对");
+          $(".lingjiang").show();
+          return;
+        }
+        if (index == 5 && sum < 5) {
+          for (let i = 0; i < li.length; i++) {
+            if (!li[i]) {
+              console.log(i);
+
+              setTimeout(() => {
+                document.getElementsByClassName("item")[i].scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                });
+              }, 200);
+              break;
+            }
+          }
+        } else {
+          setTimeout(() => {
+            document
+              .getElementsByClassName("item")
+              [index].scrollIntoView({ behavior: "smooth", block: "center" });
+          }, 200);
+        }
+      }
+      function geti(key) {
+        switch (key) {
+          case "A":
+            return 0;
+            break;
+          case "B":
+            return 1;
+            break;
+          case "C":
+            return 2;
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

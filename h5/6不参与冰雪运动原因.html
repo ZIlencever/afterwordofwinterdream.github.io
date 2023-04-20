@@ -1,0 +1,100 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=pie-doughnut&code=PYBwLglsB2AEC8sDeAoWtJgDYFMBcya6GOAHmAQOSCwcoEPKgcHKANioFdpgC_GAVSoPnKgB2qUA0RdLgBmFWJQDGOaGBwAnSkQC-A9GGDAskEAVTEMciAHMj8qhFkBbRehVFcp6ABNdgjKCoBWAKT83IsUlpWQVlVVgAZ3kIHAiCAG03PX1YaABDS3xxAEEJKQiI2AAxOWBrcP0wAE8QLMoQGL8U2Dk0pwgAVzjYeMoAFgAGXz5xAHYhygBdCuI0gDdgCCcAGTSAIxwsAHk5-Sw0nVhhNKwomaF1zddm9AiAC2AAdwJj05xz4hBgCIsoaCopDJ5DYUnZmjhLCA7mkft1ks19hssNcbrcHs8DB13m5msIYGAAMoQABeWUGH30eJkAHUcMY7oE1ponCDmkocbAwSlEZtlhBoFl4Sl7k8XicohyufonGkwGkEhz0EhYHMTliCAAOABMI3SmSogEdlQCWaYByA0AwfGADazADD_gGbtQCoBoB15UAJPKUTkU5AqtVZTw61IZOqAT-0WBxAAvG1EA7rGAF0VAMWxrqlKWVqqw6tgAEZUwA2XX-qiAQptAJDmgG8fQA88oB5v0AMVlW6iAI1NALg6gFXouPuxNegijVPZ_XiQACRoAKdUADOoFhjB9iAELdAPXOgGCNeiAPujAL2mTcVHqTKYAzB2_V3KEOmGwx4BDc0Ab3JxjmTNzs9BnpQAbiAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body style="height: 100%; margin: 0; overflow: hidden">
+<div id="container" style="height: 100%"></div>
+
+<script type="text/javascript" src="https://cdn.staticfile.org/echarts/5.4.0/echarts.min.js"></script>
+<!-- Uncomment this line if you want to dataTool extension
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/extension/dataTool.min.js"></script>
+-->
+<!-- Uncomment this line if you want to use gl extension
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+-->
+<!-- Uncomment this line if you want to echarts-stat extension
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+-->
+<!-- Uncomment this line if you want to use map
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+-->
+<!-- Uncomment these two lines if you want to use bmap extension
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/extension/bmap.min.js"></script>
+-->
+
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom, null, {
+        renderer: "canvas",
+        useDirtyRect: false,
+    });
+    var app = {};
+
+    var option;
+
+    option = {
+        title: {
+            text: "不参与冰雪运动原因",
+            left: "center",
+        },
+        grid: {
+            left: "3%",
+            right: "4%",
+            bottom: "3%",
+            containLabel: true,
+        },
+        tooltip: {
+            trigger: "item",
+            position: "inside",
+        },
+        legend: {
+            orient: "horizontal",
+            x: "center",
+            y: "bottom",
+        },
+        series: [
+            {
+                type: "pie",
+                radius: ["40%", "70%"],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: "center",
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: 20,
+                        fontWeight: "bold",
+                    },
+                },
+                labelLine: {
+                    show: false,
+                },
+                data: [
+                    {value: 82, name: "危险性较高，害怕受伤"},
+                    {value: 52, name: "对冰雪运动提不起兴趣"},
+                    {value: 116, name: "没有类似经验，不敢尝试"},
+                    {value: 71, name: "所在地没有参与冰雪运动的环境与设施"},
+                    {value: 31, name: "没有参与冰雪运动的条件"},
+                ],
+            },
+        ],
+    };
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option);
+    }
+
+    window.addEventListener("resize", myChart.resize);
+</script>
+</body>
+</html>
